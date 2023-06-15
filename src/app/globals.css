@@ -20,3 +20,137 @@ body {
 	color: rgb(var(--foreground-rgb));
 	background: #191919;
 }
+
+.contact-li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.contact-li .contact-link::after {
+	content: 'jormencar@gmail.com';
+}
+
+.contact-li {
+	-webkit-animation: shrinkLi 1s forwards;
+	animation: shrinkLi 1s forwards;
+}
+.contact-li .contact-link::after {
+	content: 'Contact';
+	-webkit-animation: changeBack 1s forwards;
+	animation: changeBack 1s forwards;
+}
+.contact-li:hover {
+	-webkit-animation: growLi 1s forwards;
+	animation: growLi 1s forwards;
+}
+.contact-li:hover .contact-link:after {
+	-webkit-animation: change 1s forwards;
+	animation: change 1s forwards;
+}
+
+/* .links:hover::after {
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	width: 0;
+	height: 3px;
+	background-color: white;
+	transition-property: width;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+	transform-origin: center;
+	transform: translateX(-50%);
+}
+
+.links:hover::after {
+	width: 150%;
+} */
+
+@-webkit-keyframes change {
+	0% {
+		content: 'Contact';
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		content: 'jormencar@gmail.com';
+	}
+}
+@keyframes change {
+	0% {
+		content: 'Contact';
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		content: 'jormencar@gmail.com';
+	}
+}
+@-webkit-keyframes changeBack {
+	0% {
+		opacity: 1;
+		content: 'jormencar@gmail.com';
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		content: 'Contact';
+	}
+}
+@keyframes changeBack {
+	0% {
+		opacity: 1;
+		content: 'jormencar@gmail.com';
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		content: 'Contact';
+	}
+}
+
+@-webkit-keyframes growLi {
+	0% {
+		width: 7rem;
+	}
+	100% {
+		width: 17rem;
+	}
+}
+@keyframes growLi {
+	0% {
+		width: 7rem;
+	}
+	100% {
+		width: 17rem;
+	}
+}
+@-webkit-keyframes shrinkLi {
+	0% {
+		width: 17rem;
+	}
+	100% {
+		width: 7rem;
+	}
+}
+@keyframes shrinkLi {
+	0% {
+		width: 17rem;
+	}
+	100% {
+		width: 7rem;
+	}
+}
