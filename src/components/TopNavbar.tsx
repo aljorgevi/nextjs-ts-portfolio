@@ -2,6 +2,8 @@
 
 import { FC } from 'react'
 import { Download } from './Icons/Download'
+import { GithubIcon } from './Icons/Github'
+import { LinkedinIcon } from './Icons/Linkedin'
 
 interface TopNavbarProps {}
 
@@ -46,13 +48,17 @@ const TopNavbar: FC<TopNavbarProps> = () => {
 					</li>
 				</ul>
 			</nav>
-			<nav className='flex fixed bottom-0 text-[#FFFFFF]'>
-				<ul>
-					<li>
-						<a href=''>L</a>
+			<nav className='fixed bottom-0 text-[#FFFFFF]'>
+				<ul className='flex flex-col'>
+					<li className='shadow-3xl py-7'>
+						<a href='#'>
+							<LinkedinIcon width={60} height={25} />
+						</a>
 					</li>
-					<li>
-						<a href=''>Github</a>
+					<li className='shadow-3xl py-4'>
+						<a href='#'>
+							<GithubIcon className='mb-5' width={60} height={25} />
+						</a>
 					</li>
 				</ul>
 			</nav>
