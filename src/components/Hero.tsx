@@ -3,18 +3,15 @@
 import { useState } from 'react'
 import { AnimatePresence, motion as m } from 'framer-motion'
 import { contentAnimation } from '@/utils/animations'
-import { useMediaQuery } from '@/app/hooks/useMediaQuery'
 
 export default function Hero() {
 	const [showAbout, setShowAbout] = useState(false)
-	const desktop = useMediaQuery('(min-width: 768px)')
 
 	return (
 		<section className='max-w-[50rem] overflow-hidden md:p-10'>
-			{desktop ? <DesktopTitle /> : <MobileTitle />}
-
+			<DesktopTitle />
+			<MobileTitle />
 			<hr className='w-[32rem] my-8 border-none h-1 text-[#fff] bg-[#fff]' />
-
 			<button
 				className={`text-center text-sm cursor-pointer block w-[14rem] border
 			border-white transition duration-200 ease-in-out py-2 px-4 uppercase tracking-wider
@@ -23,7 +20,6 @@ export default function Hero() {
 			>
 				About me
 			</button>
-
 			<AnimatePresence>
 				{showAbout && (
 					<m.article className='[&>p]:mb-4 z-[-10] relative' {...contentAnimation}>
@@ -61,7 +57,7 @@ export default function Hero() {
 }
 
 const MobileTitle = () => (
-	<div>
+	<div className='md:hidden'>
 		<div className='text-5xl overflow-hidden font-extrabold leading-none uppercase'>
 			<p>Jorge</p>
 			<p>Mena, </p>
@@ -72,7 +68,7 @@ const MobileTitle = () => (
 )
 
 const DesktopTitle = () => (
-	<div>
+	<div className='hidden md:block'>
 		<div className='text-5xl overflow-hidden font-extrabold leading-none uppercase'>
 			Jorge Mena,
 			<br />
