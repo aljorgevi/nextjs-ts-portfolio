@@ -3,19 +3,15 @@
 import { useState } from 'react'
 import { AnimatePresence, motion as m } from 'framer-motion'
 import { contentAnimation } from '@/utils/animations'
+import { useMediaQuery } from '@/app/hooks/useMediaQuery'
 
 export default function Hero() {
 	const [showAbout, setShowAbout] = useState(false)
+	const desktop = useMediaQuery('(min-width: 768px)')
 
 	return (
-		<section className='max-w-[50rem] overflow-hidden p-10'>
-			<div>
-				<h1 className='text-5xl overflow-hidden font-semibold leading-none uppercase'>
-					Jorge Mena,
-					<br />
-					Frontend Developer
-				</h1>
-			</div>
+		<section className='max-w-[50rem] overflow-hidden md:p-10'>
+			{desktop ? <DesktopTitle /> : <MobileTitle />}
 
 			<hr className='w-[32rem] my-8 border-none h-1 text-[#fff] bg-[#fff]' />
 
@@ -63,3 +59,24 @@ export default function Hero() {
 		</section>
 	)
 }
+
+const MobileTitle = () => (
+	<div>
+		<div className='text-5xl overflow-hidden font-extrabold leading-none uppercase'>
+			<p>Jorge</p>
+			<p>Mena, </p>
+			<p>Software</p>
+			<p>Engineer</p>
+		</div>
+	</div>
+)
+
+const DesktopTitle = () => (
+	<div>
+		<div className='text-5xl overflow-hidden font-extrabold leading-none uppercase'>
+			Jorge Mena,
+			<br />
+			Software Engineer
+		</div>
+	</div>
+)
