@@ -2,10 +2,23 @@ import Image from 'next/image'
 
 export function Portfolio() {
 	return (
-		<section className='grid grid-cols-1 md:grid-cols-2 gap-16 pr-16 p-10'>
-			<Project image='/evogym.png' title='Website for a gym' linkRepo='asa' linkLive='asas' />
-			<Project image='/evogym.png' title='Website for a gym' linkRepo='asa' linkLive='asas' />
-			<Project image='/evogym.png' title='Website for a gym' linkRepo='asa' linkLive='asas' />
+		<section className='grid grid-cols-1 lg:grid-cols-2 mt-10 md:mt-0 gap-16 md:pr-16 md:p-10'>
+			<Project
+				image='/evogym.png'
+				title='Website for a gym'
+				linkLive='https://evogym-ts.netlify.app/'
+			/>
+			<Project
+				image='/evogym.png'
+				title='Website for a gym'
+				linkLive='https://jorge-secondary-portfolio.netlify.app/'
+			/>
+			<Project
+				image='/evogym.png'
+				title='Website for a gym'
+				linkRepo='https://rustic-homestead-chile.netlify.app/'
+				linkLive='asas'
+			/>
 			<Project image='/evogym.png' title='Website for a gym' linkRepo='asa' linkLive='asas' />
 		</section>
 	)
@@ -22,7 +35,7 @@ const Project = ({
 	description?: string
 	image: string
 	linkLive: string
-	linkRepo: string
+	linkRepo?: string
 }) => {
 	return (
 		<div className='flex flex-col gap-6 items-start'>
@@ -50,17 +63,19 @@ const Project = ({
 					>
 						Live
 					</a>
-					<a
-						href={linkRepo}
-						className='hover:opacity-70 transition duration-200 ease-in-out'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Github
-					</a>
+					{linkRepo && (
+						<a
+							href={linkRepo}
+							className='hover:opacity-70 transition duration-200 ease-in-out'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							Github
+						</a>
+					)}
 				</div>
 
-				<p>{description}</p>
+				<p className='max-w-lg'>{description}</p>
 			</div>
 		</div>
 	)
