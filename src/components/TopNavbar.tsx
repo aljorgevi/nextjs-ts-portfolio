@@ -17,7 +17,6 @@ const TopNavbar: FC<TopNavbarProps> = () => {
 
 	return (
 		<>
-			{/* <nav className='[&>ul>li]:p-4'> */}
 			<nav className=''>
 				<ul className='flex items-center '>
 					{/* logo */}
