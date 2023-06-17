@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { AnimatePresence, motion as m } from 'framer-motion'
-import { contentAnimation } from '@/utils/animations'
+import { heroAnimation } from '@/utils/animations'
 
 export default function Hero() {
 	const [showAbout, setShowAbout] = useState(false)
@@ -22,7 +22,7 @@ export default function Hero() {
 			</button>
 			<AnimatePresence>
 				{showAbout && (
-					<m.article className='[&>p]:mb-4 z-[-10] relative' {...contentAnimation}>
+					<m.article className='[&>p]:mb-4 z-[-10] relative' {...heroAnimation}>
 						<h2 className='text-2xl font-semibold mt-8'>
 							Engaging Developer with a Business Engineering Perspective
 						</h2>
