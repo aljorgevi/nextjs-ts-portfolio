@@ -27,6 +27,18 @@ const projects = [
 		description: `Website for a rustic Airbnb cabin, meticulously crafted to showcase its unique features. Engage with a seamless reservation form, explore captivating images of the cabin, and immerse yourself in its rustic charm. The website offers an intuitive user experience, inviting visitors to embark on an unforgettable journey of discovery and relaxation.`,
 		image: '/rustic.png',
 		linkLive: 'https://rustic-homestead-chile.netlify.app/'
+	},
+	{
+		title: 'Portfolio',
+		description: `Personal portfolio website, this portfolio helped me to get my first job as web developer. The website offers a seamless user experience, with intuitive navigation and access to relevant information. The design is modern and elegant, with a minimalist approach to highlight the content.`,
+		image: '/aljorgevi.png',
+		linkLive: 'https://jorge-secondary-portfolio.netlify.app/'
+	},
+	{
+		title: 'Ecommerce Furniture',
+		description: `Furniture Fantastic, Ecommerce website for a furniture company, offering a wide range of products. The website offers a seamless user experience, with intuitive navigation and access to relevant information. The design is modern and elegant, with a minimalist approach to highlight the content.`,
+		image: '/furniture-fantastic.png',
+		linkLive: 'https://furniture-fantastic.netlify.app/'
 	}
 ]
 
