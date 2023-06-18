@@ -32,7 +32,7 @@ body {
 }
 
 .contact-li .contact-link::after {
-	content: 'jormencar@gmail.com';
+	content: 'JORMENCAR@GMAIL.COM';
 }
 
 .contact-li {
@@ -40,7 +40,7 @@ body {
 	animation: shrinkLi 1s forwards;
 }
 .contact-li .contact-link::after {
-	content: 'Contact';
+	content: 'CONTACT';
 	-webkit-animation: changeBack 1s forwards;
 	animation: changeBack 1s forwards;
 }
@@ -55,52 +55,52 @@ body {
 
 @-webkit-keyframes change {
 	0% {
-		content: 'Contact';
+		content: 'CONTACT';
 	}
 	30% {
 		opacity: 0;
 	}
 	100% {
 		opacity: 1;
-		content: 'jormencar@gmail.com';
+		content: 'JORMENCAR@GMAIL.COM';
 	}
 }
 @keyframes change {
 	0% {
-		content: 'Contact';
+		content: 'CONTACT';
 	}
 	30% {
 		opacity: 0;
 	}
 	100% {
 		opacity: 1;
-		content: 'jormencar@gmail.com';
+		content: 'JORMENCAR@GMAIL.COM';
 	}
 }
 @-webkit-keyframes changeBack {
 	0% {
 		opacity: 1;
-		content: 'jormencar@gmail.com';
+		content: 'JORMENCAR@GMAIL.COM';
 	}
 	30% {
 		opacity: 0;
 	}
 	100% {
 		opacity: 1;
-		content: 'Contact';
+		content: 'CONTACT';
 	}
 }
 @keyframes changeBack {
 	0% {
 		opacity: 1;
-		content: 'jormencar@gmail.com';
+		content: 'JORMENCAR@GMAIL.COM';
 	}
 	30% {
 		opacity: 0;
 	}
 	100% {
 		opacity: 1;
-		content: 'Contact';
+		content: 'CONTACT';
 	}
 }
 
