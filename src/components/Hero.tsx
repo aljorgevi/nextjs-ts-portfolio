@@ -39,7 +39,7 @@ export default function Hero() {
 					}
 				}}
 				className={`text-center text-sm cursor-pointer block w-[14rem] border
-			border-white transition duration-200 ease-in-out py-2 px-4 uppercase tracking-wider
+			border-[#fff] transition duration-200 ease-in-out py-2 px-4 uppercase tracking-wider
 			hover:bg-[#fff] hover:text-[#191919] z-40`}
 				onClick={() => setShowAbout(!showAbout)}
 			>
