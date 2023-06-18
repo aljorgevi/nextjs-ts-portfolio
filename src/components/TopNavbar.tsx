@@ -162,21 +162,63 @@ const MobileNavbar: FC<{
 	<nav>
 		<div className='md:hidden flex justify-between items-center px-6 py-3'>
 			<ul className='flex'>
-				<li className='shadow-3xl '>
+				<m.li
+					className='shadow-3xl '
+					initial={{
+						opacity: 0,
+						y: -50
+					}}
+					animate={{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 0.5
+						}
+					}}
+				>
 					<a href='#'>
 						<LinkedinIcon width={60} height={25} />
 					</a>
-				</li>
-				<li className='shadow-3xl'>
+				</m.li>
+				<m.li
+					className='shadow-3xl'
+					initial={{
+						opacity: 0,
+						y: -50
+					}}
+					animate={{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 0.5,
+							delay: 0.2
+						}
+					}}
+				>
 					<a href='#'>
 						<GithubIcon className='' width={60} height={25} />
 					</a>
-				</li>
+				</m.li>
 			</ul>
 
-			<button className='cursor-pointer' onClick={showSidebarHandler}>
+			<m.button
+				initial={{
+					opacity: 0,
+					y: -50
+				}}
+				animate={{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 0.5,
+						delay: 0.4
+					}
+				}}
+				className='cursor-pointer'
+				onClick={showSidebarHandler}
+			>
 				<Burger />
-			</button>
+			</m.button>
 		</div>
 
 		<AnimatePresence>

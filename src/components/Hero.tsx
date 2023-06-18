@@ -34,9 +34,8 @@ export default function Hero() {
 					opacity: 1,
 					y: 0,
 					transition: {
-						duration: 0.6,
-						delay: 0.8,
-						ease: 'easeInOut'
+						duration: 0.5,
+						delay: 0.8
 					}
 				}}
 				className={`text-center text-sm cursor-pointer block w-[14rem] border
@@ -83,14 +82,27 @@ export default function Hero() {
 }
 
 const MobileTitle = () => (
-	<div className='md:hidden'>
-		<div className='text-5xl overflow-hidden font-extrabold leading-none uppercase'>
+	<m.div
+		className='md:hidden'
+		initial={{
+			opacity: 0
+		}}
+		animate={{
+			opacity: 1,
+
+			transition: {
+				duration: 0.5,
+				delay: 0.6
+			}
+		}}
+	>
+		<div className='text-4xl xsm:text-5xl overflow-hidden font-extrabold leading-none uppercase'>
 			<p>Jorge</p>
 			<p>Mena, </p>
 			<p>Software</p>
 			<p>Engineer</p>
 		</div>
-	</div>
+	</m.div>
 )
 
 const DesktopTitle = () => (
