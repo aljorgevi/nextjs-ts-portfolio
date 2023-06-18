@@ -5,26 +5,26 @@ import { motion as m } from 'framer-motion'
 
 const projects = [
 	{
-		title: 'Sphera - Beskpoke Services',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+		title: 'Sphera',
+		description: `Bespoke Services company with elegant design, showcasing exceptional tailored services. Carefully crafted for seamless user experience, enabling easy navigation and access to relevant information.`,
 		image: '/sphera.png',
 		linkLive: 'https://sphera.vercel.app/'
 	},
 	{
-		title: 'Website for a gym',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+		title: 'Evo Gym',
+		description: `Dynamic website for a local gym showcasing state-of-the-art equipment, diverse fitness classes, and a passionate community. Modern design promotes an active lifestyle, with intuitive user experience for easy navigation and access to information.`,
 		image: '/evo.png',
 		linkLive: 'https://evogym-ts.netlify.app/'
 	},
 	{
-		title: 'Loki - rent a car',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+		title: 'Loki',
+		description: `Spanish rent-a-car company in Chile. A user-friendly website, offering effortless and reliable vehicle rentals. Explore vehicles, compare prices, and make reservations seamlessly. Experience exceptional service and attention to detail through our sleek and intuitive design.`,
 		image: '/loki.png',
 		linkLive: 'https://lokicars.cl/'
 	},
 	{
 		title: 'Rustic Homestead - Airbnb Cabins',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+		description: `Website for a rustic Airbnb cabin, meticulously crafted to showcase its unique features. Engage with a seamless reservation form, explore captivating images of the cabin, and immerse yourself in its rustic charm. The website offers an intuitive user experience, inviting visitors to embark on an unforgettable journey of discovery and relaxation.`,
 		image: '/rustic.png',
 		linkLive: 'https://rustic-homestead-chile.netlify.app/'
 	}
@@ -73,7 +73,14 @@ const Project = ({
 }) => {
 	return (
 		<div className='flex flex-col gap-6 items-start'>
-			<div className='mb-0 shadow relative overflow-hidden w-[100%]'>
+			<a
+				href={linkLive}
+				target='_blank'
+				rel='noopener noreferrer'
+				className='mb-0 shadow relative overflow-hidden w-[100%]
+				hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer
+			'
+			>
 				<Image
 					src={image}
 					quality={100}
@@ -84,9 +91,16 @@ const Project = ({
 					sizes='100vw'
 					style={{ width: '100%', height: 'auto' }} // optional
 				/>
-			</div>
+			</a>
 			<div>
-				<h3 className='text-lg uppercase font-semibold'>{title}</h3>
+				<a
+					href={linkLive}
+					target='_blank'
+					rel='noopener noreferrer'
+					className='hover:opacity-70 transition duration-200 ease-in-out'
+				>
+					<h3 className='text-xl uppercase font-bold'>{title}</h3>
+				</a>
 
 				<div className='[&>a]:border-b-2 [&>a]:border-x-white my-2'>
 					<a
