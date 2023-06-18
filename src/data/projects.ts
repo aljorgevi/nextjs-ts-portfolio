@@ -52,7 +52,7 @@ export const projects: Project[] = [
 	{
 		title: 'Unsplash Gallery',
 		description: `Unsplash Gallery, a website to search for images from Unsplash API. Crated with React, this website offerts infinite scroll and search by keyword.`,
-		image: '/unsplash-gallery.png',
+		image: '/unsplash-gallery.webp',
 		linkLive: 'https://stock-photos-unsplash.netlify.app/',
 		linkRepo: 'https://github.com/aljorgevi/Stock-photos-API',
 		type: 'project'
