@@ -129,7 +129,7 @@ const CardFilter = ({
 			<div className='flex overflow-hidden  border border-[#fff] divide-x  rtl:flex-row-reverse bg-[#191919]  divide-[#fff]'>
 				<button
 					onClick={() => onClick('web')}
-					className={`px-4 py-2 text-sm font-medium transition-colors duration-200 sm:text-base sm:px-6  text-gray-300 hover:bg-[#fff] hover:text-[#191919]
+					className={`px-4 py-2 text-sm font-medium transition-colors duration-200 sm:text-base sm:px-6 hover:bg-[#fff] hover:text-[#191919]
 					${active === 'web' && 'bg-[#fff] text-[#191919]'}
 					`}
 				>
@@ -138,7 +138,7 @@ const CardFilter = ({
 
 				<button
 					onClick={() => onClick('project')}
-					className={`px-4 py-2 text-sm font-medium  transition-colors duration-200 sm:text-base sm:px-6  text-gray-300 hover:bg-[#fff] hover:text-[#191919]
+					className={`px-4 py-2 text-sm font-medium  transition-colors duration-200 sm:text-base sm:px-6 hover:bg-[#fff] hover:text-[#191919]
 					${active === 'project' && 'bg-[#fff] text-[#191919]'}
 					`}
 				>
@@ -147,7 +147,7 @@ const CardFilter = ({
 
 				<button
 					onClick={() => onClick('all')}
-					className={`px-4 py-2 text-sm font-medium  transition-colors duration-200 sm:text-base sm:px-6  text-gray-300 hover:bg-[#fff] hover:text-[#191919]
+					className={`px-4 py-2 text-sm font-medium  transition-colors duration-200 sm:text-base sm:px-6 hover:bg-[#fff] hover:text-[#191919]
 					${active === 'all' && 'bg-[#fff] text-[#191919]'}
 					`}
 				>
