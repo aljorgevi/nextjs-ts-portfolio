@@ -43,16 +43,44 @@ const Sidebar = () => (
 										h-[100%] w-[5rem] md:flex flex-col items-center justify-end'
 	>
 		<ul className='flex flex-col'>
-			<li className='shadow-3xl py-7'>
+			<m.li
+				className='shadow-3xl py-7'
+				initial={{
+					opacity: 0,
+					x: -50
+				}}
+				animate={{
+					opacity: 1,
+					x: 0,
+					transition: {
+						duration: 0.5,
+						delay: 0.9
+					}
+				}}
+			>
 				<a href='#'>
 					<LinkedinIcon width={60} height={25} />
 				</a>
-			</li>
-			<li className='shadow-3xl py-4'>
+			</m.li>
+			<m.li
+				initial={{
+					opacity: 0,
+					x: -50
+				}}
+				animate={{
+					opacity: 1,
+					x: 0,
+					transition: {
+						duration: 0.5,
+						delay: 0.9
+					}
+				}}
+				className='shadow-3xl py-4'
+			>
 				<a href='#'>
 					<GithubIcon className='mb-5' width={60} height={25} />
 				</a>
-			</li>
+			</m.li>
 		</ul>
 	</nav>
 )
@@ -61,26 +89,67 @@ const DesktopNavbar: FC<{ handleDownload: () => void }> = ({ handleDownload }) =
 	<div className='hidden md:block'>
 		<ul className='flex items-center '>
 			{/* logo */}
-			<li className='text-3xl font-extrabold uppercase w-[5rem] p-4 pr-0'>JM</li>
+			<m.li
+				initial={{
+					opacity: 0,
+					y: -50
+				}}
+				animate={{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 0.5
+					}
+				}}
+				className='text-3xl font-extrabold uppercase w-[5rem] p-4 pr-0'
+			>
+				JM
+			</m.li>
 
 			{/* CV */}
 			<li className='shadow-3xl py-3 px-7 p-4'>
-				<button
+				<m.button
+					initial={{
+						opacity: 0,
+						y: -50
+					}}
+					animate={{
+						opacity: 1,
+						y: 0,
+						transition: {
+							duration: 0.5,
+							delay: 0.2
+						}
+					}}
 					onClick={handleDownload}
 					className='flex gap-2 items-center  relative group hover:opacity-75 transition-all duration-300 ease-in-out'
 				>
 					<Download />
 					<div>CV</div>
 					<span className='absolute bg-white h-[3px] w-0 bottom-[-15px] left-1/2 transition-all duration-300 origin-center transform-gpu -translate-x-1/2 group-hover:w-[180%]'></span>
-				</button>
+				</m.button>
 			</li>
 
 			{/* contact */}
-			<li className='links contact-li cursor-pointer uppercase shadow-3xl py-3 px-3 group hover:opacity-75 transition-all duration-300 ease-in-out p-4'>
+			<m.li
+				initial={{
+					opacity: 0,
+					y: -50
+				}}
+				animate={{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 0.5,
+						delay: 0.4
+					}
+				}}
+				className='links contact-li cursor-pointer uppercase shadow-3xl py-3 px-3 group hover:opacity-75 transition-all duration-300 ease-in-out p-4'
+			>
 				<button className='contact-link relative'>
 					<span className='absolute bg-white h-[3px] w-0 bottom-[-15px] left-1/2 transition-all duration-300 origin-center transform-gpu -translate-x-1/2 group-hover:w-[120%]'></span>
 				</button>
-			</li>
+			</m.li>
 		</ul>
 	</div>
 )
@@ -110,16 +179,15 @@ const MobileNavbar: FC<{
 			</button>
 		</div>
 
-		<AnimatePresence mode='wait' initial={false}>
+		<AnimatePresence>
 			{show && (
-				<m.div key='navbar-details' className='h-[70px] w-screen my-4' {...navbarAnimation}>
-					<div className='flex flex-col justify-center items-center transition h-38rem'>
+				<m.div className='w-screen my-4' {...navbarAnimation}>
+					<div className='flex flex-col justify-center items-center  h-38rem'>
 						<ul>
 							<li className='flex justify-center'>
 								<button
 									onClick={handleDownload}
-									className='flex gap-2 items-center group hover:opacity-75 mb-2
-						transition-all duration-300 ease-in-out relative'
+									className='flex gap-2 items-center group hover:opacity-75 mb-2 relative'
 								>
 									<Download />
 									<div>CV </div>

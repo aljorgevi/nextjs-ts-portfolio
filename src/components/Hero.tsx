@@ -11,15 +11,41 @@ export default function Hero() {
 		<section className='max-w-[50rem] overflow-hidden md:p-10'>
 			<DesktopTitle />
 			<MobileTitle />
-			<hr className='w-[32rem] my-8 border-none h-1 text-[#fff] bg-[#fff]' />
-			<button
+			<m.hr
+				initial={{
+					opacity: 0
+				}}
+				animate={{
+					opacity: 1,
+
+					transition: {
+						duration: 0.5,
+						delay: 0.9
+					}
+				}}
+				className='w-[20rem] md:w-[32rem] my-8 border-none h-1 text-[#fff] bg-[#fff]'
+			/>
+			<m.button
+				initial={{
+					y: -50,
+					opacity: 0
+				}}
+				animate={{
+					opacity: 1,
+					y: 0,
+					transition: {
+						duration: 0.6,
+						delay: 0.8,
+						ease: 'easeInOut'
+					}
+				}}
 				className={`text-center text-sm cursor-pointer block w-[14rem] border
 			border-white transition duration-200 ease-in-out py-2 px-4 uppercase tracking-wider
 			hover:bg-[#fff] hover:text-[#191919] z-40`}
 				onClick={() => setShowAbout(!showAbout)}
 			>
-				About me
-			</button>
+				{showAbout ? 'Unmasking the Enigma!' : 'About me'}
+			</m.button>
 			<AnimatePresence>
 				{showAbout && (
 					<m.article className='[&>p]:mb-4 z-[-10] relative' {...heroAnimation}>
@@ -68,11 +94,24 @@ const MobileTitle = () => (
 )
 
 const DesktopTitle = () => (
-	<div className='hidden md:block'>
+	<m.div
+		className='hidden md:block'
+		initial={{
+			opacity: 0
+		}}
+		animate={{
+			opacity: 1,
+
+			transition: {
+				duration: 0.5,
+				delay: 0.9
+			}
+		}}
+	>
 		<div className='text-5xl overflow-hidden font-extrabold leading-none uppercase'>
 			Jorge Mena,
 			<br />
 			Software Engineer
 		</div>
-	</div>
+	</m.div>
 )

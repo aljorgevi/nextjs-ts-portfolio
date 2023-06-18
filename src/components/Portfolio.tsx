@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { motion as m } from 'framer-motion'
 
 const projects = [
 	{
@@ -31,7 +32,19 @@ const projects = [
 
 export function Portfolio() {
 	return (
-		<section className='grid grid-cols-1 lg:grid-cols-2 mt-10 md:mt-0 gap-16 md:pr-16 md:p-10'>
+		<m.section
+			initial={{
+				opacity: 0
+			}}
+			animate={{
+				opacity: 1,
+				transition: {
+					duration: 0.5,
+					delay: 0.9
+				}
+			}}
+			className='grid grid-cols-1 lg:grid-cols-2 mt-10 md:mt-0 gap-16 md:pr-16 md:p-10'
+		>
 			{projects.map((project, i) => (
 				<Project
 					key={i}
@@ -41,7 +54,7 @@ export function Portfolio() {
 					description={project.description}
 				/>
 			))}
-		</section>
+		</m.section>
 	)
 }
 
