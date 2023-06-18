@@ -19,8 +19,9 @@ const TopNavbar: FC<TopNavbarProps> = () => {
 
 	const handleDownload = () => {
 		const link = document.createElement('a')
-		link.href = '/CV.pdf'
+		link.href = '/Jorge_Mena_CV.pdf'
 		link.download = 'Jorge_Mena_CV.pdf'
+
 		link.click()
 	}
 
@@ -58,7 +59,7 @@ const Sidebar = () => (
 					}
 				}}
 			>
-				<a href='#'>
+				<a href='https://www.linkedin.com/in/jorgeamena/' target='_blank' rel='noreferrer'>
 					<LinkedinIcon width={60} height={25} />
 				</a>
 			</m.li>
@@ -77,7 +78,7 @@ const Sidebar = () => (
 				}}
 				className='shadow-3xl py-4'
 			>
-				<a href='#'>
+				<a href='https://github.com/aljorgevi' target='_blank' rel='noreferrer'>
 					<GithubIcon className='mb-5' width={60} height={25} />
 				</a>
 			</m.li>
@@ -146,7 +147,12 @@ const DesktopNavbar: FC<{ handleDownload: () => void }> = ({ handleDownload }) =
 				}}
 				className='links contact-li cursor-pointer uppercase shadow-3xl py-3 px-3 group hover:opacity-75 transition-all duration-300 ease-in-out p-4'
 			>
-				<button className='contact-link relative'>
+				<button
+					className='contact-link relative'
+					onClick={() => {
+						window.location.href = 'mailto:jormencar@gmail.com'
+					}}
+				>
 					<span className='absolute bg-white h-[3px] w-0 bottom-[-15px] left-1/2 transition-all duration-300 origin-center transform-gpu -translate-x-1/2 group-hover:w-[120%]'></span>
 				</button>
 			</m.li>
@@ -176,7 +182,7 @@ const MobileNavbar: FC<{
 						}
 					}}
 				>
-					<a href='#'>
+					<a href='https://www.linkedin.com/in/jorgeamena/' target='_blank' rel='noreferrer'>
 						<LinkedinIcon width={60} height={25} />
 					</a>
 				</m.li>
@@ -195,7 +201,7 @@ const MobileNavbar: FC<{
 						}
 					}}
 				>
-					<a href='#'>
+					<a href='https://github.com/aljorgevi' target='_blank' rel='noreferrer'>
 						<GithubIcon className='' width={60} height={25} />
 					</a>
 				</m.li>

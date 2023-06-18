@@ -58,10 +58,10 @@ export default function Hero() {
 							drive tangible results.
 						</p>
 						<p>
-							Throughout my 1.5 years of experience, I have honed my skills in JavaScript,
-							Typescript, React, and Java. Staying at the forefront of the industry, I embrace the
-							latest advancements, including data structures, programming patterns, and algorithms.
-							I am driven by a passion for continuous learning and always eager to embrace new
+							Throughout my years of experience, I have honed my skills in JavaScript, Typescript,
+							React, and Java. Staying at the forefront of the industry, I embrace the latest
+							advancements, including data structures, programming patterns, and algorithms. I am
+							driven by a passion for continuous learning and always eager to embrace new
 							technologies.
 						</p>
 						<p>
