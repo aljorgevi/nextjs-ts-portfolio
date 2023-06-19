@@ -2,18 +2,25 @@
 
 import Image from 'next/image'
 import { motion as m } from 'framer-motion'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Project, ProjectType } from '@/types/types'
 import { projects } from '@/data/projects'
 
 export function Portfolio() {
+	const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects)
 	const [active, setActive] = useState<ProjectType>('web')
 
 	function handleFilterChange(filter: ProjectType) {
 		setActive(filter)
 	}
 
-	const filteredProjects = projects.filter(project => project.type === active || active === 'all')
+	useEffect(() => {
+		if (active === 'all') {
+			setFilteredProjects(projects)
+		} else {
+			setFilteredProjects(projects.filter(project => project.type === active))
+		}
+	}, [active])
 
 	return (
 		<section>
