@@ -13,6 +13,8 @@ export function Portfolio() {
 		setActive(filter)
 	}
 
+	const filteredProjects = projects.filter(project => project.type === active || active === 'all')
+
 	return (
 		<section>
 			<CardFilter onClick={handleFilterChange} active={active} />
@@ -29,11 +31,9 @@ export function Portfolio() {
 				}}
 				className='grid grid-cols-1 lg:grid-cols-2 mt-10 md:mt-0 gap-16 md:pr-16 md:p-10'
 			>
-				{projects
-					.filter(project => project.type === active || active === 'all')
-					.map((project, index) => (
-						<ProjectCard key={index} {...project} />
-					))}
+				{filteredProjects.map((project, index) => (
+					<ProjectCard key={index} {...project} />
+				))}
 			</m.section>
 		</section>
 	)
