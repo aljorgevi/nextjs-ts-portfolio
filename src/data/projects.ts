@@ -1,4 +1,5 @@
-import { Project } from '@/types/types'
+import { PROJECTS_TYPES } from '@/constans'
+import { type Project } from '@/types/types'
 
 export const projects: Project[] = [
 	{
@@ -7,7 +8,7 @@ export const projects: Project[] = [
 		image: '/sphera.png',
 		linkLive: 'https://sphera.vercel.app/',
 		linkRepo: '',
-		type: 'web'
+		type: PROJECTS_TYPES.WEB
 	},
 	{
 		title: 'Evo Gym',
@@ -15,7 +16,7 @@ export const projects: Project[] = [
 		image: '/evo.png',
 		linkLive: 'https://evogym-ts.netlify.app/',
 		linkRepo: '',
-		type: 'web'
+		type: PROJECTS_TYPES.WEB
 	},
 	{
 		title: 'Loki',
@@ -23,7 +24,7 @@ export const projects: Project[] = [
 		image: '/loki.png',
 		linkLive: 'https://lokicars.cl/',
 		linkRepo: '',
-		type: 'web'
+		type: PROJECTS_TYPES.WEB
 	},
 	{
 		title: 'Rustic Homestead - Airbnb Cabins',
@@ -31,7 +32,7 @@ export const projects: Project[] = [
 		image: '/rustic.png',
 		linkLive: 'https://rustic-homestead-chile.netlify.app/',
 		linkRepo: '',
-		type: 'web'
+		type: PROJECTS_TYPES.WEB
 	},
 	{
 		title: 'Portfolio',
@@ -39,7 +40,7 @@ export const projects: Project[] = [
 		image: '/aljorgevi.png',
 		linkLive: 'https://jorge-secondary-portfolio.netlify.app/',
 		linkRepo: '',
-		type: 'web'
+		type: PROJECTS_TYPES.WEB
 	},
 	{
 		title: 'Ecommerce Furniture',
@@ -47,7 +48,7 @@ export const projects: Project[] = [
 		image: '/furniture-fantastic.png',
 		linkLive: 'https://furniture-fantastic.netlify.app/',
 		linkRepo: '',
-		type: 'web'
+		type: PROJECTS_TYPES.WEB
 	},
 	{
 		title: 'Unsplash Gallery',
@@ -55,6 +56,38 @@ export const projects: Project[] = [
 		image: '/unsplash-gallery.webp',
 		linkLive: 'https://stock-photos-unsplash.netlify.app/',
 		linkRepo: 'https://github.com/aljorgevi/Stock-photos-API',
-		type: 'project'
+		type: PROJECTS_TYPES.PROJECT
+	},
+	{
+		title: 'Blog',
+		description: `MDXBlog, a blog created with MDX and Gatsby.js. This blog is a personal project to learn about MDX and Gatsby.js.`,
+		image: '/blog.webp',
+		linkLive: 'https://stock-photos-unsplash.netlify.app/',
+		linkRepo: 'https://github.com/aljorgevi',
+		type: PROJECTS_TYPES.PROJECT
+	},
+	{
+		title: 'Good Taste Pizza',
+		description: `Good Taste Pizza, a website to order pizza online. Minimalist design with a simple and intuitive user experience.`,
+		image: '/pizza.webp',
+		linkLive: 'https://good-taste-pizza.netlify.app/',
+		linkRepo: '',
+		type: PROJECTS_TYPES.WEB
+	},
+	{
+		title: 'Jhon Doe Portfolio',
+		description: `Jhon Doe Portfolio, a portfolio website for a fictional character. Minimalist design with a simple and intuitive user experience.`,
+		image: '/jhon-doe-portfolio.webp',
+		linkLive: 'https://jhon-doe-portfolio.netlify.app/',
+		linkRepo: 'https://github.com/aljorgevi',
+		type: PROJECTS_TYPES.WEB
+	},
+	{
+		title: 'Music Player',
+		description: `Music Player, a music player created with React. Created with react, this music player offers a simple and intuitive user experience.`,
+		image: '/music-player.webp',
+		linkLive: 'https://flow-music-player.netlify.app/',
+		linkRepo: 'https://github.com/aljorgevi/react-music-player',
+		type: PROJECTS_TYPES.PROJECT
 	}
 ]
