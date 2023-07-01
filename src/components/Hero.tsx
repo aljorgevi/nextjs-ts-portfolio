@@ -43,7 +43,7 @@ export default function Hero() {
 			hover:bg-[#fff] hover:text-[#191919] z-40`}
 				onClick={() => setShowAbout(!showAbout)}
 			>
-				{showAbout ? 'Unmasking the Enigma!' : 'Click me!'}
+				{showAbout ? 'Unmasking the Enigma!' : 'about me'}
 			</m.button>
 			<AnimatePresence>
 				{showAbout && (
