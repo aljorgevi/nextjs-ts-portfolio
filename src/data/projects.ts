@@ -62,7 +62,7 @@ export const projects: Project[] = [
 		title: 'Blog',
 		description: `MDXBlog, a blog created with MDX and Gatsby.js. This blog is a personal project to learn about MDX and Gatsby.js.`,
 		image: '/blog.webp',
-		linkLive: 'https://stock-photos-unsplash.netlify.app/',
+		linkLive: 'https://silly-jennings-66f259.netlify.app/',
 		linkRepo: 'https://github.com/aljorgevi',
 		type: PROJECTS_TYPES.PROJECT
 	},
